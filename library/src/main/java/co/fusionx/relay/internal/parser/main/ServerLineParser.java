@@ -132,9 +132,7 @@ public class ServerLineParser {
             // Do nothing
         } else {
             final CodeParser parser = mCodeParser.get(code);
-            if (parser == null) {
-                Log.d("Relay", mLine);
-            } else {
+            if (parser != null) {
                 parser.onParseCode(parsedArray, code);
             }
         }
